@@ -11,9 +11,9 @@
   }
   
   html {
-  overflow-x: hidden;
-  position: relative; 
-}
+    overflow-x: hidden;
+    position: relative; 
+  }
 
   body {
     font-family: 'Poppins', sans-serif;
@@ -355,12 +355,7 @@
     font-size: 2.5rem;
   }
 
-  /* ==================================================
-    === INI ADALAH SOLUSI BARU UNTUK MASALAH ANDA ===
-    ==================================================
-    Menyembunyikan kucing terbang (position: fixed) di mobile
-    yang 99% menyebabkan scroll ke samping.
-  */
+  /* Menyembunyikan kucing terbang (position: fixed) di mobile */
   .cat {
     display: none !important;
   }
