@@ -312,15 +312,14 @@
    Media Queries for Mobile Responsiveness
    ========================================= */
 
+/* Tablet (Large) - Mulai dari 991.98px ke bawah */
 @media (max-width: 991.98px) {
   .hero-section .hero-content {
-    text-align: center; 
+    text-align: center;
   }
- 
   .hero-section .col-lg-5 {
     margin-top: 40px; 
   }
-
   .hero-title {
     font-size: 4rem;
   }
@@ -329,11 +328,13 @@
   }
 }
 
+/* Tablet (Small) & Mobile (Large) - Mulai dari 768px ke bawah */
 @media (max-width: 768px) {
   .hero-section {
-    height: auto; 
+    height: auto;
     min-height: auto;
-    padding: 120px 0 80px; 
+    padding: 120px 0 80px;
+  }
   .hero-title {
     font-size: 3.5rem;
   }
@@ -343,29 +344,35 @@
   .section {
     padding: 80px 0;
   }
-
   .floating-shape,
   .footer-shape {
     display: none;
   }
-
-
   .about-section .position-absolute {
     display: none;
   }
-  
-
   .display-4 { 
     font-size: 2.5rem;
   }
+
+  /* ==================================================
+    === INI ADALAH SOLUSI BARU UNTUK MASALAH ANDA ===
+    ==================================================
+    Menyembunyikan kucing terbang (position: fixed) di mobile
+    yang 99% menyebabkan scroll ke samping.
+  */
+  .cat {
+    display: none !important;
+  }
 }
 
+/* Mobile (Medium) - Mulai dari 576px ke bawah */
 @media (max-width: 576px) {
   .navbar-brand {
     font-size: 1.2rem;
   }
   .hero-title {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
   }
   .hero-subtitle {
     font-size: 2rem;
@@ -386,41 +393,31 @@
   .card-body {
     padding: 25px !important;
   }
-  
- 
   .hero-section .img-fluid {
-    max-width: 280px !important; 
+    max-width: 280px !important;
   }
-
   .hero-section .position-absolute {
     top: -20px !important;
-    right: 10% !important; 
+    right: 10% !important;
     transform: rotate(0deg) !important;
   }
   .hero-section .position-absolute img {
-    width: 60px; 
+    width: 60px;
   }
-  
-
   .moment-img {
-    height: 250px; 
+    height: 250px;
     object-fit: cover;
   }
-
   .moment-overlay {
     transform: translateY(0);
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
   }
-
   .btn-music {
     width: 50px;
     height: 50px;
     font-size: 18px;
     bottom: 15px;
     right: 15px;
-  }
-  .cat { /* Kucing terbang */
-    width: 60px;
   }
   footer {
     padding: 30px 0;
@@ -432,6 +429,7 @@
   }
 }
 
+/* Mobile (Small) - Mulai dari 390px ke bawah */
 @media (max-width: 390px) {
   .hero-title {
     font-size: 2.1rem;
@@ -448,16 +446,13 @@
   .display-4 {
     font-size: 1.8rem;
   }
-
   .hero-section .img-fluid {
     max-width: 240px !important;
   }
-
   .hero-section .position-absolute {
     top: -15px !important;
   }
   .hero-section .position-absolute img {
     width: 50px;
   }
-}
 }
