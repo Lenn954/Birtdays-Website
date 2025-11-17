@@ -1,4 +1,4 @@
- // Initialize AOS animations
+// Initialize AOS animations
  document.addEventListener('DOMContentLoaded', function() {
     AOS.init();
   });
@@ -70,8 +70,17 @@
       const confetti = document.createElement('div');
       confetti.className = 'confetti';
       
+      // ======================================================
+      // === PERBAIKAN DI SINI ===
+      // ======================================================
+      // Baris asli Anda: confetti.style.left = Math.random() * 100 + 'vw';
+      // Ini menyebabkan 'overflow' karena 100vw + lebar confetti > 100%
+      
+      const confettiMaxWidth = 15; // Lebar maks confetti (10 + 5)
+      confetti.style.left = Math.random() * (window.innerWidth - confettiMaxWidth) + 'px';
+      // ======================================================
+      
       // Random properties
-      confetti.style.left = Math.random() * 100 + 'vw';
       confetti.style.backgroundColor = getRandomColor();
       confetti.style.width = Math.floor(Math.random() * 10 + 5) + 'px';
       confetti.style.height = Math.floor(Math.random() * 10 + 5) + 'px';
