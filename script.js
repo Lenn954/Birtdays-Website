@@ -48,6 +48,22 @@
     createConfetti(10);
   });
 
+  // Music control
+  const musicBtn = document.getElementById('playMusicBtn');
+  const birthdaySong = document.getElementById('birthdaySong');
+  let isPlaying = false;
+
+  musicBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      birthdaySong.pause();
+      musicBtn.classList.remove('playing');
+    } else {
+      birthdaySong.play();
+      musicBtn.classList.add('playing');
+    }
+    isPlaying = !isPlaying;
+  });
+
   // Create confetti effect
   function createConfetti(amount) {
     for (let i = 0; i < amount; i++) {
