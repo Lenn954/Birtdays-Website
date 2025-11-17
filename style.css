@@ -10,6 +10,11 @@
     box-sizing: border-box;
   }
   
+  html {
+  overflow-x: hidden;
+  position: relative; 
+}
+
   body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--light);
@@ -303,8 +308,19 @@
     }
   }
 
-  /* Media Queries for Mobile Responsiveness */
-@media (max-width: 992px) {
+  /* =========================================
+   Media Queries for Mobile Responsiveness
+   ========================================= */
+
+@media (max-width: 991.98px) {
+  .hero-section .hero-content {
+    text-align: center; 
+  }
+ 
+  .hero-section .col-lg-5 {
+    margin-top: 40px; 
+  }
+
   .hero-title {
     font-size: 4rem;
   }
@@ -315,9 +331,9 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    height: auto;
-    padding: 100px 0 80px;
-  }
+    height: auto; 
+    min-height: auto;
+    padding: 120px 0 80px; 
   .hero-title {
     font-size: 3.5rem;
   }
@@ -327,20 +343,20 @@
   .section {
     padding: 80px 0;
   }
-  .floating-shape {
-    opacity: 0.4;
+
+  .floating-shape,
+  .footer-shape {
+    display: none;
   }
-  .shape1 {
-    width: 200px;
-    height: 200px;
+
+
+  .about-section .position-absolute {
+    display: none;
   }
-  .shape2 {
-    width: 150px;
-    height: 150px;
-  }
-  .shape3 {
-    width: 100px;
-    height: 100px;
+  
+
+  .display-4 { 
+    font-size: 2.5rem;
   }
 }
 
@@ -349,14 +365,17 @@
     font-size: 1.2rem;
   }
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.5rem; 
   }
   .hero-subtitle {
     font-size: 2rem;
   }
   .lead {
     font-size: 1rem;
-    line-height: 1.6; /* Menambah jarak antar baris */
+    line-height: 1.6;
+  }
+  .display-4 {
+    font-size: 2.2rem;
   }
   .section {
     padding: 60px 0;
@@ -365,27 +384,34 @@
     margin-bottom: 20px;
   }
   .card-body {
-    padding: 20px 15px !important; /* Mengurangi padding horizontal */
+    padding: 25px !important;
   }
   
-  /* Perbaikan untuk gambar agar responsif */
+ 
+  .hero-section .img-fluid {
+    max-width: 280px !important; 
+  }
+
+  .hero-section .position-absolute {
+    top: -20px !important;
+    right: 10% !important; 
+    transform: rotate(0deg) !important;
+  }
+  .hero-section .position-absolute img {
+    width: 60px; 
+  }
+  
+
   .moment-img {
-    width: 100%; /* Membuat lebar gambar penuh */
-    height: auto; /* Membiarkan tinggi menyesuaikan */
-    max-height: 250px; /* Batas tinggi maksimum */
-    object-fit: cover; /* Mencegah gambar penyet */
+    height: 250px; 
+    object-fit: cover;
   }
-  
+
   .moment-overlay {
-    padding: 15px;
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
   }
-  .moment-overlay h5 {
-    font-size: 1rem;
-  }
-  .moment-overlay p {
-    font-size: 0.875rem;
-    margin-bottom: 0;
-  }
+
   .btn-music {
     width: 50px;
     height: 50px;
@@ -393,34 +419,45 @@
     bottom: 15px;
     right: 15px;
   }
-  .cat {
+  .cat { /* Kucing terbang */
     width: 60px;
   }
   footer {
     padding: 30px 0;
   }
-  .social-icons a {
+  footer .social-icons a {
     width: 35px;
     height: 35px;
     margin: 0 5px;
   }
 }
 
-/* Specific fixes for very small devices */
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   .hero-title {
-    font-size: 2rem; /* Sedikit lebih kecil */
+    font-size: 2.1rem;
   }
   .hero-subtitle {
-    font-size: 1.5rem; /* Sedikit lebih kecil */
+    font-size: 1.7rem;
   }
   .lead {
-    font-size: 0.9rem; /* Menyesuaikan teks paragraf */
+    font-size: 0.9rem;
   }
   .badge {
     font-size: 0.75rem !important;
   }
   .display-4 {
-    font-size: 1.8rem; /* Menyesuaikan judul utama "Happy Birthday" */
+    font-size: 1.8rem;
   }
+
+  .hero-section .img-fluid {
+    max-width: 240px !important;
+  }
+
+  .hero-section .position-absolute {
+    top: -15px !important;
+  }
+  .hero-section .position-absolute img {
+    width: 50px;
+  }
+}
 }
